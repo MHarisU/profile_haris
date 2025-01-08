@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Root variables for theme control */
+:root {
+    --primary-color: #4285f4;
+    --secondary-color: #34a853;
+    --background-color: #f8f9fa;
+    --text-color: #000;
+    --card-background-color: #fff;
+    --card-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --card-background-color: #1e1e1e;
+    --card-shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base body styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', 'Open Sans', system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+/* Paragraph */
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Card-like sections */
+.profile-section,
+.badge-section,
+.badge-card,
+.experience-card,
+.project-card,
+.contact-info,
+.badge-item {
+    background: var(--card-background-color);
+    box-shadow: 0 2px 15px var(--card-shadow-color);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for cards */
+.profile-section:hover,
+.badge-section:hover,
+.badge-card:hover,
+.experience-card:hover,
+.project-card:hover,
+.badge-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px var(--card-shadow-color);
+}
+
+/* Profile image styles */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+/* Skill tags */
+.skill-tag {
+    background: #e8f0fe;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0.25rem;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Social links */
+.social-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Contact info box */
+.contact-info {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: var(--card-background-color);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 4px var(--card-shadow-color);
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+/* Badge item */
+.badge-item {
+    background: var(--card-background-color);
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--card-shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.badge-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px var(--card-shadow-color);
+}
+
+/* Badge icon */
+.badge-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.badge-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Badge item text */
+.badge-item h6 {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+
+/* Badge date */
+.badge-date {
+    color: #666;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Section title */
+.section-title {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative; /* Added position relative */
+}
+
+/* Navigation container */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nav list styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+    transform: translateY(-3px);
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Navigation icon */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Main container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    transition: padding 0.3s ease;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--card-background-color);
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* Loading screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Circular progress */
+.circular-progress {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #e0e0e0;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    color: #ddd;
+}
+
+.dark-mode-toggle i {
+    margin-right: 0.5rem;
+}
+
+/* Muted text */
+.text-muted {
+    color: var(--text-color) !important;
+}
+
+.text-muted-light {
+    color: #6c757d !important;
+}
+
+/* Right nav items */
+.nav-right {
+    margin-left: auto;
+}
+
+/* Mobile menu toggle button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #ddd;
+}
+
+/* Navigation content */
+.menu-content {
+    display: flex;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    header {
+        position: static; /* Make header non-sticky in mobile view */
+        padding: 0.5rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-content {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%; /* Modified width to occupy full width*/
+        max-height: 400px; /* Set max height of menu dropdown */
+        overflow-y: auto;   /* Allow scrolling if menu is larger */
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-content.show {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
