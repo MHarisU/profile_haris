@@ -31,6 +31,8 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0; /* Add this */
+    padding: 0; /* Reset padding */
 }
 
 /* Headings */
@@ -214,8 +216,9 @@ header {
     color: #fff;
     padding: 1rem 0;
     position: -webkit-sticky;
-    position: sticky;
+    position: fixed; /* Changed from relative to fixed */
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     font-family: 'Roboto', sans-serif;
@@ -402,23 +405,42 @@ footer a:hover {
 /* Navigation content */
 .menu-content {
     display: flex;
+    transition: all 0.3s ease;
+
 }
 
 /* Mobile Menu */
 @media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Add padding to account for fixed header */
+        -webkit-tap-highlight-color: transparent; /* Better touch feedback */
+
+    }
     header {
-        position: static; /* Make header non-sticky in mobile view */
+        height: auto;
+        position: fixed; /* Change to fixed for better mobile UX */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color, #ffffff); /* Added fallback */
+        z-index: 1000;
         padding: 0.5rem 0;
     }
+
+    nav {
+        padding: 0.5rem 1rem;
+        position: relative;    }
 
     nav ul {
         flex-direction: column;
         align-items: flex-start;
+        margin: 0;
+        padding: 0;
     }
 
     nav ul li {
         margin: 0.5rem 0;
-    }
+        width: 100%; /* Full width for better touch targets */    }
 
     .menu-toggle {
         display: block;
@@ -426,21 +448,26 @@ footer a:hover {
 
     .menu-content {
         display: none;
+        position: fixed; /* Changed from absolute to fixed */
+        top: 50px; /* Adjust this based on your header height */
         flex-direction: column;
         align-items: flex-start;
         background-color: var(--primary-color);
-        position: absolute;
-        top: 100%;
         left: 0;
         width: 100%; /* Modified width to occupy full width*/
         max-height: 400px; /* Set max height of menu dropdown */
         overflow-y: auto;   /* Allow scrolling if menu is larger */
+        z-index: 999;
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
     }
 
     .menu-content.show {
         display: flex;
+        transform: translateY(0);
+        opacity: 1;
     }
 
     nav ul {
