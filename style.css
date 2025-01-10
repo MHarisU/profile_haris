@@ -162,13 +162,18 @@ p {
 .badge-item {
     background: var(--card-background-color);
     border-radius: 8px;
-    padding: 0.75rem;
+    padding: 0.5rem; /* Reduced padding */
     text-align: center;
     box-shadow: 0 2px 4px var(--card-shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
+    height: 150px; /* Set a fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center align items */
 }
 
+/* Badge item hover effect */
 .badge-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 10px var(--card-shadow-color);
@@ -311,7 +316,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--secondary-color);
+    color: var (--secondary-color);
 }
 
 /* Loading screen */
