@@ -17,8 +17,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
     <div class="loading-screen" id="loading-screen">
-        <div class="circular-progress"></div>
+
+        <!-- <div class="circular-progress"></div> -->
+        <div class="loading-content">
+            <p id="loading-text">Loading</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <p id="progress-percentage">0%</p>
+        </div>
+
     </div>
     <!-- Header Navigation -->
     <header>
@@ -33,12 +44,15 @@
                 <li><a href="#professional-experience">Experience</a></li>
                 <li><a href="#projects-card">Projects</a></li>
                 <li><a href="#education-card">Education</a></li>
+                <li><a href="#achievements-card">Achievements</a></li>
+                <li><a href="#contact-card">Contatct Me</a></li>
                 <!-- Add more links as needed -->
                 <li class="nav-right">
                     <button class="dark-mode-toggle" onclick="toggleTheme()">
                         <i id="theme-icon" class="fas fa-moon"></i>
                         Dark Mode
                     </button>
+                    <a href="haris_resume_2025.pdf" class="btn btn-outline-light ms-3" download>Download Resume</a>
                 </li>
             </ul>
         </nav>
@@ -82,30 +96,142 @@
 
                     <div class="mt-4">
                         <h5>Technical Skills</h5>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">Kotlin</span>
-                            <span class="skill-tag">Jetpack Compose</span>
-                            <span class="skill-tag">Android SDK</span>
-                            <span class="skill-tag">RESTful API</span>
-                            <span class="skill-tag">MVVM</span>
-                            <span class="skill-tag">Firebase</span>
-                            <span class="skill-tag">SQLite</span>
-                            <span class="skill-tag">Room DB</span>
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">Material Design</span>
-                            <span class="skill-tag">RxAndroid</span>
-                            <span class="skill-tag">Multithreading</span>
-                            <span class="skill-tag">Push Notifications</span>
-                            <span class="skill-tag">Gradle</span>
-                            <span class="skill-tag">XML</span>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>Java</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>Kotlin</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>Jetpack Compose</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>Android SDK</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>RESTful API</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>MVVM</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>Firebase</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>SQLite</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>Room DB</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>MySQL</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 65%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>Material Design</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>RxAndroid</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>Multithreading</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>Push Notifications</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>Gradle</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="skill-tag">
+                                    <span>XML</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 98%;"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="mt-4">
                         <div class="contact-info">
                             <h5>Summary</h5>
-                            <p class="text-start">Android developer with Bachelor's in Computer Science and 4+ years of experience delivering high-quality mobile apps across various domains. Strong expertise in analyzing requirements, designing and testing apps for outstanding performance and user experience. Committed to staying current with industry trends and emerging technologies.</p>
+                            <p class="text-start">Senior Android Developer with 5+ years of expertise in delivering scalable, user-focused mobile applications across healthcare, e-commerce, and education domains. Proven track record of leading cross-functional teams, reducing crash rates by 98%, and ensuring 95% on-time project delivery. Skilled in modern Android development with Kotlin, Jetpack Compose, and clean architecture. Adept at mentoring teams, driving innovation, and ensuring compliance with industry standards like HIPAA and GDPR. Passionate about leveraging emerging technologies like AI/ML and IoT to build impactful solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -116,7 +242,7 @@
                 
                 <!-- Favorite Badges Section -->
                 <section id="favorite-badges" class="badge-section">
-                    <h3 class="section-title"><i class="fas fa-award me-2"></i>Google Badges</h3>
+                    <h3 class="section-title"><i class="fas fa-bahai me-2"></i>Google Badges</h3>
                     <div class="row row-cols-2 row-cols-sm-3 row-cols-md-6 g-2">
                         <div class="col">
                             <div class="badge-item">
@@ -169,16 +295,27 @@
                     
                     
                     <div class="experience-card">
-                        <h5>Lead Android Developer</h5>
+                        <h5>Senior Android Developer - Lead</h5>
                         <p class="text-muted">Umbrella Healthcare Systems | 11/2021 - Present</p>
+                        <p class="text-muted">Technical Leadership:</p>
                         <ul class="mb-0">
-                            <li>Requirements and created detailed technical designs for video consultation app</li>
-                            <li>Design and implement UI/UX using Material Design principles</li>
-                            <li>Develop backend integration with healthcare APIs and payment gateways</li>
-                            <li>Lead and mentor junior developers, conduct code reviews</li>
-                            <li>Ensure app compliance with healthcare regulations and standards</li>
-                            <li>Write and test high-quality, maintainable Java code</li>
-                            <li>Collaborate with cross-functional teams for project requirements</li>
+                            <li>Architected and launched a HIPAA-compliant telemedicine platform 1,000+ concurrent video consultations.</li>
+                            <li>Achieved 98.7% build success rate on Play Store by reducing crash rate through proactive error handling.</li>
+                            <li>Enhanced performance by implementing coroutines and flows, reducing main-thread blocking by 60%.</li>
+                            <li>Migrated legacy projects from Java to Kotlin, improving maintainability and reducing bugs by 30%.</li>
+                            <li>Established CI/CD pipelines, cutting deployment time from 2 hours to 15 minutes.</li>
+                        </ul>
+                        <p class="text-muted"></p>
+                        <p class="text-muted">Team Leadership:</p>
+                        <ul class="mb-0">
+                            <li>Mentored teams of developers, improving code quality by 40% through code reviews and training sessions.</li>
+                            <li>Led the adoption of Jetpack Compose, Kotlin Coroutines, and Clean Architecture in several projects</li>
+                        </ul>
+                        <p class="text-muted"></p>
+                        <p class="text-muted">Innovation & Optimization:</p>
+                        <ul class="mb-0">
+                            <li>Integrated ML-powered symptom analysis, increasing user engagement by 25%.</li>
+                            <li>Developed dynamic feature delivery, reducing app size by 30%.</li>
                         </ul>
                     </div>
 
@@ -186,11 +323,10 @@
                         <h5>Senior Android Developer</h5>
                         <p class="text-muted">SoftvrBox | 09/2020 - 11/2021</p>
                         <ul class="mb-0">
-                            <li>Implemented app designs and UI using Android tools</li>
-                            <li>Developed backend logic and integrated APIs</li>
-                            <li>Deployed apps to stores with ongoing support</li>
-                            <li>Managed multiple projects within budget and deadlines</li>
-                            <li>Stayed current with mobile app development trends</li>
+                            <li>Developed and deployed 5+ production apps with 100K+ cumulative downloads.</li>
+                            <li>Reduced API response time by 40% optimized caching.</li>
+                            <li>Implemented a real-time chat feature with longer uptime.</li>
+                            <li>Mentored junior developers, accelerating their progression to mid-level roles.</li>
                         </ul>
                     </div>
 
@@ -198,10 +334,10 @@
                         <h5>Android Developer</h5>
                         <p class="text-muted">Weboxy Pvt Ltd | 02/2019 - 09/2020</p>
                         <ul class="mb-0">
-                            <li>Designed and maintained Android applications</li>
-                            <li>Wrote clean, maintainable, and efficient code</li>
-                            <li>Implemented user-friendly interfaces using Material Design</li>
-                            <li>Conducted unit testing and performance optimization</li>
+                            <li>Built and maintained 10+ Android applications across diverse business domains.</li>
+                            <li>Optimized Room database queries, reducing query time by 40%.</li>
+                            <li>Designed offline-first architecture, improving user experience in low-connectivity scenarios.</li>
+                            <li>Increased code reliability with comprehensive unit testing, reducing production bugs by 45%.</li>
                             <li>Collaborated with server-side teams for API integration</li>
                         </ul>
                     </div>
@@ -212,28 +348,53 @@
                     <h3 class="section-title"><i class="fas fa-project-diagram me-2"></i>Featured Projects</h3>
                     
                     <div class="project-card">
+                        <img src="quicktask_logo.png" alt="Quick Task" class="project-icon">
+                        <h5>Quick Task</h5>
+                        <p>Quick Task Mobile app is a platform for technicians working with Quickcontractors.com to access and complete their work orders.</p>
+                        <p>•	Tech Stack: Java, Kotlin, Jetpack Compose, Google Maps, Bing Maps, MVVM</p>
+                        <p>•	Impact: Achieved 98.8% crash free user experience on Firebase Crashlytics, migration from Java to Kotlin.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.qc.quickcontractors&hl=en" class="btn btn-outline-primary btn-sm">View Project</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bestsongs_logo.jpg" alt="Bestsongs.pk" class="project-icon">
+                        <h5>Bestsongs.pk</h5>
+                        <p>Music streaming application with extensive local and international music library.</p>
+                        <p>•	Tech Stack: Java, ExoPlayer, JWPlayer SDK, YouTube API, Google Ads, MVP</p>
+                        <p>•	Impact: Implemented different streaming players for better ads support and user experience.</p>
+                        <a href="https://play.google.com/store/apps/details?id=pk.bestsongs.android" class="btn btn-outline-primary btn-sm">View on Play Store</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="umbrella_logo.png" alt="Umbrella Healthcare Systems" class="project-icon">
                         <h5>Umbrella Healthcare Systems</h5>
                         <p>Comprehensive healthcare platform with video consultation, online medicine delivery, and lab test booking features.</p>
+                        <p>•	Tech Stack: Java, RoomDB, WebRTC, MVVM, BoxMaps, Agora SDK, Firebase FCM</p>
+                        <p>•	Impact: Successful deployment and compliance with HIPAA & GDPR.</p>
                         <a href="https://www.umbrellamd.com/" class="btn btn-outline-primary btn-sm">View Project</a>
                     </div>
 
                     <div class="project-card">
+                        <img src="cncd_logo.jpg" alt="CNCD Surveys" class="project-icon">
                         <h5>CNCD Surveys</h5>
-                        <p>Data collection app for field research officers with efficient database integration.</p>
+                        <p>•	Data collection app for field research officers with efficient database integration.</p>
                         <a href="https://www.cncdpk.com/" class="btn btn-outline-primary btn-sm">View Project</a>
                     </div>
 
                     <div class="project-card">
-                        <h5>BrainyWood Learning App</h5>
+                        <img src="brainywood_logo.jpg" alt="BrainyWood Learning App" class="project-icon">
+                        <h5>Adaptive Learning Platform (BrainyWood)</h5>
                         <p>Online learning platform with course management and progress tracking features.</p>
+                        <p>•	Tech Stack: Java, Kotlin, WordPress API, MySQL, Firebase</p>
+                        <p>•	Impact: User retention by 35% via gamification and personalized learning paths.</p>
+                        <!-- <ul class="mb-0">
+                            <li>Tech Stack: Java, Kotlin, WordPress API, MySQL, Firebase</li>
+                            <li>Impact: User retention by 35% via gamification and personalized learning paths.</li>
+                        </ul> -->
                         <a href="https://play.google.com/store/apps/details?id=com.sharad.brainywood" class="btn btn-outline-primary btn-sm">View on Play Store</a>
                     </div>
 
-                    <div class="project-card">
-                        <h5>Bestsongs.pk</h5>
-                        <p>Music streaming application with extensive local and international music library.</p>
-                        <a href="https://play.google.com/store/apps/details?id=pk.bestsongs.android" class="btn btn-outline-primary btn-sm">View on Play Store</a>
-                    </div>
+                    
                 </div>
 
                 <!-- Education Section -->
@@ -242,8 +403,42 @@
                     <div class="experience-card">
                         <h5>Bachelor's in Computer Science</h5>
                         <p class="text-muted">Quest University | 2019</p>
-                        <p>3rd position holder with Medal of Appreciation for achieving 97/100 in OOP</p>
+                        <p>•	Distinction in batch.</p>
+                        <p>•	Medal of Appreciation for excellence in Object-Oriented Programming.</p>
+                        <p>•	Thesis: "Enhancing Mobile App Performance through Efficient Architecture Design.</p>
                     </div>
+                </div>
+
+                <!-- Achievements - Certifications – Courses - Awards -->
+                <div id="achievements-card" class="badge-section">
+                    <h3 class="section-title"><i class="fas fa-award me-2"></i>Achievements - Certifications - Courses - Awards</h3>
+                    <div class="experience-card">
+                        <p>•	Awarded "Innovative Leader 2023" at Umbrella Healthcare.</p>
+                        <p>•	Published 10+ technical articles on LinkedIn about Android Development.</p>
+                        <p>•	Google Associate Android Developer Certification (2023)</p>
+                        <p>•	Certified Android Developer LinkedIn (2022)</p>
+                        <p>•	Kotlin Multiplatform Mobile Development - JetBrains (2023)</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form Section -->
+                <div id="contact-card" class="badge-section">
+                    <h3 class="section-title"><i class="fas fa-envelope me-2"></i>Contact Me</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
