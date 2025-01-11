@@ -47,15 +47,36 @@ document.addEventListener('DOMContentLoaded', () => {
     menuContent.addEventListener('click', (e) => {
         e.stopPropagation();
     });
+
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your message!');
+        contactForm.reset();
+    });
 });
 
 // Loading screen
 window.addEventListener('load', function() {
     const loadingScreen = document.getElementById('loading-screen');
-    setTimeout(() => {
-        loadingScreen.classList.add('hidden');
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 500);
-    }, 500);
+    const progress = document.getElementById('progress');
+    const progressPercentage = document.getElementById('progress-percentage');
+    let percentage = 0;
+
+    const interval = setInterval(() => {
+        if (percentage < 100) {
+            percentage += 1;
+            progress.style.width = `${percentage}%`;
+            progressPercentage.textContent = `${percentage}%`;
+        } else {
+            clearInterval(interval);
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 300);
+            }, 300);
+        }
+    }, 10); // Adjust the interval duration as needed
 });
